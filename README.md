@@ -11,8 +11,9 @@ public class StepDefinitions {
     MainPage mainPage = new MainPage(driver);
     driver.manage().window().maximize();
 
-    @Given("^I am on the \"([^\"]*)\" page$")
-    public void iAmOnThePage(String url) {
+    driver.findElement(By.xpath("//input[@name='location']")).SendKeys();
+    public void iAmOnThePage(String url) 
+    {
         driver.get("http://www.nsw.gov.au");
     }
 
@@ -47,7 +48,8 @@ public class StepDefinitions {
     }
 
     @Then("^I should see only open space pins on the map$")
-    public void iShouldSeeOnlyOpenSpacePins() {
+    public void iShouldSeeOnlyOpenSpacePins()
+    {
         // Add assertion to validate the presence of only open space pins on the map
     }
 
