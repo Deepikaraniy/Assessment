@@ -13,25 +13,25 @@ public class StepDefinitions {
 
     @Given("^I am on the \"([^\"]*)\" page$")
     public void iAmOnThePage(String url) {
-        driver.get(http://www.nsw.gov.au");
+        driver.get("http://www.nsw.gov.au");
     }
 
     @When("^I enter \"([^\"]*)\" in the search box$")
     public void iEnterInTheSearchBox(String location)
     {
-        mainPage.enterSearchLocation(Haymarket);
+        mainPage.enterSearchLocation("Haymarket");
     }
 
     @And("^I select \"([^\"]*)\" from auto-suggestion$")
     public void iSelectFromAutoSuggestion(String suggestion)
     {
-        mainPage.selectAutoSuggestion(Haymarket NSW, Australia);
+        mainPage.selectAutoSuggestion("Haymarket NSW, Australia");
     }
 
     @And("^I click the \"([^\"]*)\" button$")
     public void iClickTheButton(String button)
     {
-        mainPage.clickButton(Open Space);
+        mainPage.clickButton("Open Space");
     }
 
     @Then("^I should see result pins on the map$")
@@ -43,7 +43,7 @@ public class StepDefinitions {
     @When("^I check the \"([^\"]*)\" checkbox$")
     public void iCheckTheCheckbox(String checkbox)
     {
-        mainPage.checkCheckbox(Apply filters);
+        mainPage.checkCheckbox("Apply filters");
     }
 
     @Then("^I should see only open space pins on the map$")
