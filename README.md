@@ -14,7 +14,7 @@ public class StepDefinitions {
     driver.findElement(By.xpath("//input[@name='location']")).SendKeys();
     public void iAmOnThePage(String url) 
     {
-        driver.get("http://www.nsw.gov.au");
+        driver.get("http://www.nsw.gov.au/visiting-and-exploring-nsw/walks-near-me/map");
     }
 
     @When("^I enter \"([^\"]*)\" in the search box$")
